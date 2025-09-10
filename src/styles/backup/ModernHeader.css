@@ -1,0 +1,435 @@
+/* Ultra-Compact Clean Header - No Conflicts */
+.modern-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 16px rgba(59, 130, 246, 0.25);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+
+
+.modern-header.scrolled {
+  box-shadow: 0 4px 24px rgba(59, 130, 246, 0.4);
+  transform: translateZ(0) scale(0.98);
+}
+
+/* Row 1: Brand + Controls */
+.header-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: transparent;
+  transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-header.scrolled .header-top-row {
+  padding: 4px 16px;
+}
+
+/* Brand Section */
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+}
+
+.modern-header.scrolled .logo-icon {
+  width: 28px;
+  height: 28px;
+  font-size: 1rem;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  transition: font-size 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-header.scrolled .brand-name {
+  font-size: 1rem;
+}
+
+/* Header Controls */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 3px;
+  position: relative;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+}
+
+.hamburger-line {
+  width: 18px;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.modern-header.scrolled .menu-toggle {
+  width: 32px;
+  height: 32px;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+}
+
+.modern-header.scrolled .logout-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 0.9rem;
+}
+
+/* Row 2: Navigation */
+.main-navigation-row {
+  padding: 12px 16px 20px;
+  background: transparent;
+  opacity: 1;
+  max-height: 140px;
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.modern-header.scrolled .main-navigation-row {
+  opacity: 0;
+  max-height: 0;
+  padding: 0 16px;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+/* Navigation Grid - Better Alignment */
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Navigation Cards - Smaller & More Aesthetic */
+.nav-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  padding: 12px 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  min-height: 70px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.modern-header.scrolled .nav-card {
+  padding: 8px 8px;
+  min-height: 50px;
+}
+
+.nav-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-card.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.modern-header.scrolled .nav-icon {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.nav-card:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+.nav-content {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: font-size 0.3s ease;
+}
+
+.modern-header.scrolled .nav-title {
+  font-size: 0.65rem;
+  margin-bottom: 2px;
+}
+
+.nav-desc {
+  font-size: 0.6rem;
+  opacity: 0.9;
+  font-weight: 500;
+  line-height: 1.1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.modern-header.scrolled .nav-desc {
+  font-size: 0.5rem;
+  opacity: 0.7;
+}
+
+/* Secondary Menu */
+.secondary-menu {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.secondary-menu.open {
+  max-height: 200px;
+  padding: 12px 16px;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.menu-item {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.menu-item.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.menu-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Mobile Responsive - Only for very small screens */
+/* Tablet/Mobile Styles */
+@media (max-width: 768px) {
+  .modern-header {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+  }
+  
+  .header-top-row {
+    padding: 12px 16px;
+    min-height: 60px;
+  }
+  
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .brand-name {
+    font-size: 20px;
+    color: white;
+    font-weight: 800;
+  }
+  
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .hamburger-line {
+    background: white;
+    width: 18px;
+    height: 2px;
+  }
+  
+  .main-navigation-row {
+    padding: 8px 16px 16px;
+    max-height: 120px;
+  }
+  
+  .nav-grid {
+    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+  
+  .nav-card {
+    padding: 8px 6px;
+    min-height: 55px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-icon {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .nav-title {
+    font-size: 0.65rem;
+    color: white;
+  }
+  
+  .nav-desc {
+    font-size: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-navigation-row {
+    padding: 4px 16px 16px;
+  }
+  
+  .nav-grid {
+    gap: 4px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+  
+  .nav-card {
+    padding: 6px 4px;
+    min-height: 50px;
+    width: 100%;
+  }
+  
+  .nav-icon {
+    font-size: 0.9rem;
+  }
+  
+  .nav-title {
+    font-size: 0.6rem;
+  }
+  
+  .nav-desc {
+    font-size: 0.45rem;
+  }
+}

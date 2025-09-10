@@ -1,0 +1,47 @@
+/* ==========================================
+   CSS VARIABLES - DESIGN SYSTEM
+   Extracted from original styles
+   ========================================== */
+
+:root {
+  /* Colors */
+  --surface: #ffffff;
+  --surface-muted: #f7fbff;
+  --border: #e6eef6;
+  --text: #101828;
+  --muted: #667085;
+  --primary: #3b82f6; /* sky-500 */
+  --primary-600: #2563eb; /* blue-600 */
+  --accent: #22c55e; /* green-500 */
+  --warn: #f59e0b; /* amber-500 */
+  --ring: rgba(59, 130, 246, 0.25);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  --gradient-surface: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --gradient-dashboard: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --shadow-primary: 0 4px 16px rgba(59, 130, 246, 0.25);
+  
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-normal: all 0.3s ease;
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

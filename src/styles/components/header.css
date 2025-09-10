@@ -1,0 +1,355 @@
+/* ==========================================
+   HEADER - FINAL ACTIVE STYLES
+   Extracted from cascade analysis
+   Zero visual changes - only active styles
+   ========================================== */
+
+.nav-grid {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  border: none !important; /* Removes the white line */
+  padding-bottom: 12px; /* Add some space at the bottom */
+}
+
+.nav-card {
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+  overflow: hidden;
+  padding: 6px 4px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* CONFLICT RESOLVED: .nav-icon
+   Sources: ModernHeader.css, styles.css
+   Final winning styles below */
+.nav-icon {
+  color: white;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.nav-desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.45rem;
+  font-weight: 500;
+  line-height: 1.1;
+  opacity: 1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* CONFLICT RESOLVED: .logo-icon
+   Sources: ModernHeader.css, styles.css
+   Final winning styles below */
+.logo-icon {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: none;
+  color: white !important;
+  display: flex;
+  font-size: 20px;
+  height: 32px;
+  justify-content: center;
+  overflow: hidden !important;
+  position: relative !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 32px;
+}
+
+.nav-title {
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin-bottom: 3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: font-size 0.3s ease;
+}
+
+.menu-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.menu-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* CONFLICT RESOLVED: .brand-name
+   Sources: ModernHeader.css, Auth.css, styles.css
+   Final winning styles below */
+.brand-name {
+  font-size: 24px;
+  font-weight: 900;
+  color: white; /* Changed to white */
+  letter-spacing: -0.05em;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  transition: color 0.3s ease;
+}
+
+.menu-items {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 1fr;
+}
+
+.logout-btn {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  height: 40px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 40px;
+}
+
+.nav-content {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-toggle {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 40px;
+}
+
+.modern-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 24px rgba(59, 130, 246, 0.3);
+  color: white;
+  /* overflow: hidden; */ /* REMOVED to prevent clipping */
+  position: sticky;
+  top: 0;
+  transform: translateZ(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(23, 56, 115, 0.5); /* Subtle finisher line */
+}
+
+/* CONFLICT RESOLVED: .brand-section
+   Sources: ModernHeader.css, styles.css
+   Final winning styles below */
+.brand-section {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+/* CONFLICT RESOLVED: .header-top-row
+   Sources: ModernHeader.css, styles.css
+   Final winning styles below */
+.header-top-row {
+  align-items: center;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 12px 16px;
+  transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.secondary-menu {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-line {
+  background: white;
+  border-radius: 1px;
+  height: 2px;
+  transition: all 0.3s ease;
+  width: 18px;
+}
+
+.nav-card.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.header-controls {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.menu-item.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.secondary-menu.open {
+  max-height: 200px;
+  padding: 12px 16px;
+}
+
+.modern-header.scrolled {
+  box-shadow: 0 4px 24px rgba(59, 130, 246, 0.4);
+  transform: translateZ(0) scale(0.98);
+}
+
+.nav-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+}
+
+.logo-icon::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  content: '';
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  transition: left 0.5s ease;
+  width: 100%;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+}
+
+.logo-icon:hover::before {
+  left: 100%;
+}
+
+.modern-header.scrolled .nav-card {
+  min-height: 50px;
+  padding: 8px 8px;
+}
+
+.modern-header.scrolled .nav-icon {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.modern-header.scrolled .nav-desc {
+  font-size: 0.5rem;
+  opacity: 0.7;
+}
+
+.modern-header.scrolled .logo-icon {
+  font-size: 1rem;
+  height: 28px;
+  width: 28px;
+}
+
+.modern-header.scrolled .nav-title {
+  font-size: 0.65rem;
+  margin-bottom: 2px;
+}
+
+.modern-header.scrolled .brand-name {
+  font-size: 1rem;
+}
+
+.modern-header.scrolled .logout-btn {
+  font-size: 0.9rem;
+  height: 32px;
+  width: 32px;
+}
+
+.modern-header.scrolled .menu-toggle {
+  height: 32px;
+  width: 32px;
+}
+
+.modern-header.scrolled .header-top-row {
+  padding: 4px 16px;
+}
+
+.modern-header.scrolled .main-navigation-row {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 16px;
+  pointer-events: none;
+  transform: translateY(-10px);
+}
+
+.nav-card:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+.menu-toggle.open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+

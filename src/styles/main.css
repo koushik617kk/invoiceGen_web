@@ -1,0 +1,459 @@
+/* ==========================================
+   MAIN CSS - ORGANIZED IMPORTS
+   Clean, organized, conflict-free styles
+   Reduced from 14,599+ lines to ~2,000 lines
+   ========================================== */
+
+/* Base styles */
+@import './base/variables.css';
+@import './base/reset.css';
+
+/* Page styles - Import before components to avoid conflicts */
+@import './pages/landing.css';
+
+/* Component styles */
+@import './components/header.css';
+@import './components/modal.css';
+
+/* Other page styles */
+@import './pages/dashboard.css';
+@import './pages/auth.css';
+@import './pages/quick-invoice.css';
+@import './pages/onboarding.css';
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Subscription Status in Header */
+.subscription-status-header {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.subscription-status-header .subscription-status--compact {
+  margin: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .subscription-status-header {
+    margin-right: 0.25rem;
+  }
+  
+  .subscription-status-header .subscription-status--compact {
+    min-width: 70px;
+    max-width: 85px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscription-status-header {
+    margin-right: 0.125rem;
+  }
+  
+  .subscription-status-header .subscription-status--compact {
+    min-width: 60px;
+    max-width: 75px;
+    padding: 0.2rem 0.3rem;
+  }
+}
+
+.main-content {
+  flex: 1;
+  background: var(--gradient-surface);
+}
+
+/* Dashboard specific override - allow full width */
+.dashboard-container {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 24px !important;
+}
+
+/* Loading container */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-dashboard);
+  z-index: 9999;
+}
+
+/* Success Banner Styles */
+.quick-invoice-success-banner {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 16px 24px;
+  margin: 0 0 24px 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  animation: slideInSuccess 0.5s ease-out;
+}
+
+.success-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.success-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.success-text {
+  flex: 1;
+}
+
+.success-text h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.success-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.close-success {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.close-success:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+@keyframes slideInSuccess {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive for success banner */
+@media (max-width: 768px) {
+  .quick-invoice-success-banner {
+    margin: 0 16px 20px 16px;
+    padding: 14px 16px;
+  }
+  
+  .success-content {
+    gap: 12px;
+  }
+  
+  .success-icon {
+    font-size: 1.3rem;
+  }
+  
+  .success-text h3 {
+    font-size: 1rem;
+  }
+  
+  .success-text p {
+    font-size: 0.85rem;
+  }
+  
+  .close-success {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+}
+
+/* Invoice View Styles */
+.invoice-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.invoice-header-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+}
+
+/* Scoped to invoice view only */
+.invoice-view-container .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.invoice-view-container .header-left {
+  flex: 1;
+}
+
+.back-btn {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.back-btn:hover {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.invoice-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+}
+
+.invoice-view-container .invoice-meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.invoice-view-container .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.invoice-view-container .header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 2px solid;
+}
+
+.status-badge.paid {
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.status-badge.unpaid {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.status-badge.success {
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.status-badge.warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.status-icon {
+  font-size: 1rem;
+}
+
+.status-text {
+  font-weight: 600;
+}
+
+.overdue-badge {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.invoice-view-container .header-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.action-btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-btn.primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  transform: translateY(-1px);
+}
+
+.action-btn.secondary {
+  background: rgba(255, 255, 255, 0.8);
+  color: #374151;
+  border: 1px solid rgba(209, 213, 219, 0.5);
+}
+
+.action-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(209, 213, 219, 0.8);
+}
+
+/* Quick Invoice Header - Simple & Mobile-Friendly */
+.quick-invoice-page .page-header {
+  /* Simple mobile layout */
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 12px !important;
+  
+  /* Simple blue background */
+  background: #3b82f6 !important;
+  border-radius: 8px !important;
+  color: white !important;
+}
+
+/* Simple back button */
+.quick-invoice-page .page-header .back-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 6px 8px !important;
+  min-height: 28px !important;
+  
+  /* Simple button styling */
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 11px !important;
+  cursor: pointer !important;
+}
+
+/* Simple header title */
+.quick-invoice-page .page-header .header-title {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex: 1 !important;
+}
+
+/* Simple lightning icon */
+.quick-invoice-page .page-header .title-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 4px !important;
+  color: #fbbf24 !important;
+  font-size: 14px !important;
+}
+
+/* Simple heading */
+.quick-invoice-page .page-header .header-title h1 {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+  letter-spacing: -0.005em !important;
+  line-height: 1.1 !important;
+}
+
+/* Tagline - Exact image typography */
+/* Simple tagline */
+.quick-invoice-page .page-header .header-title p {
+  font-size: 0.75rem !important;
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 400 !important;
+}
+
+/* Simple responsive - slightly larger on desktop */
+@media (min-width: 768px) {
+  .quick-invoice-page .page-header {
+    padding: 10px 16px !important;
+    gap: 16px !important;
+  }
+  
+  .quick-invoice-page .page-header .header-title h1 {
+    font-size: 1.1rem !important;
+  }
+  
+  .quick-invoice-page .page-header .header-title p {
+    font-size: 0.8rem !important;
+  }
+}

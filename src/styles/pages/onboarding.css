@@ -1,0 +1,1100 @@
+/* ==========================================
+   ONBOARDING PAGE STYLES
+   Clean, modern, professional design
+   ========================================== */
+
+/* Override conflicting styles from main styles.css */
+.onboarding-standalone .service-category-card,
+.onboarding-standalone .specific-service-card {
+  all: unset;
+}
+
+.onboarding-standalone * {
+  box-sizing: border-box;
+}
+
+/* Ensure proper spacing and visibility for service cards */
+.onboarding-standalone .service-categories {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+.onboarding-standalone .specific-services-list {
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+/* ==========================================
+   STANDALONE LAYOUT
+   ========================================== */
+.onboarding-standalone {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+/* ==========================================
+   STANDALONE HEADER
+   ========================================== */
+.onboarding-standalone-header {
+  display: none;
+}
+
+.standalone-brand h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.standalone-brand .logo-icon {
+  align-items: center;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 4px;
+  color: white !important;
+  display: flex;
+  font-size: 12px;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+.standalone-brand p {
+  margin: 2px 0 0 0;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+   ========================================== */
+.onboarding-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+.onboarding-header {
+  text-align: center;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: white;
+}
+
+.onboarding-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.onboarding-header p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ==========================================
+   PROGRESS BAR
+   ========================================== */
+.onboarding-progress {
+  margin-bottom: 12px;
+  background: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 3px;
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.progress-steps {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #64748b !important;
+  white-space: nowrap !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+}
+
+.progress-steps .step {
+  color: #64748b !important;
+  transition: color 0.3s ease !important;
+  text-align: left !important;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  flex: none !important;
+}
+
+.progress-steps .step.active {
+  color: #3b82f6 !important;
+  font-weight: 600 !important;
+}
+
+/* ==========================================
+   STEP CONTAINER
+   ========================================== */
+.onboarding-step {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  min-height: auto;
+  position: relative;
+  overflow: visible;
+}
+
+.onboarding-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.onboarding-step h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.step-number {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-description {
+  font-size: 14px;
+  color: #64748b;
+  text-align: center;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   BUSINESS TYPE CARDS
+   ========================================== */
+.business-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.business-type-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.business-type-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.business-type-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.business-type-card:hover::before {
+  left: 100%;
+}
+
+.business-type-card.selected {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.business-type-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.business-type-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.business-type-card.selected h3 {
+  color: white;
+}
+
+.business-type-card p {
+  font-size: 11px;
+  margin: 0 0 8px 0;
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+.business-type-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+
+.business-type-examples span {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.business-type-card.selected .business-type-examples span {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* ==========================================
+   SERVICES/PRODUCTS SECTIONS
+   ========================================== */
+.section-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  position: relative;
+}
+
+.section-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 2px 2px 0 0;
+}
+
+.section-title {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Search Input */
+.service-search-container {
+  margin-bottom: 16px;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 16px;
+  background: white;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-input-wrapper input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-input-wrapper svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #64748b;
+}
+
+/* Service Categories */
+.service-categories {
+  display: grid;
+  gap: 24px;
+}
+
+/* Override conflicting styles for service category container */
+.onboarding-standalone .service-category-container {
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 20px !important;
+  overflow: visible !important;
+  background: white !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 20px !important;
+  box-shadow: none !important;
+}
+
+.service-category-container {
+  border: 2px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: visible;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.service-category-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-category-header {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.service-category-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.service-category-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.service-badge {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Specific Services Grid */
+.specific-services-list {
+  padding: 16px;
+}
+
+/* Override any conflicting styles from main styles.css */
+.onboarding-standalone .specific-service-card {
+  padding: 20px !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  background: white !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: visible !important;
+  margin-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.specific-services-list h4 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.specific-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  overflow: visible;
+}
+
+.specific-service-card {
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  margin-bottom: 12px;
+}
+
+.specific-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.specific-service-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+}
+
+.specific-service-card:hover::before {
+  left: 100%;
+}
+
+.specific-service-card.selected {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+}
+
+.specific-service-header h5 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.specific-service-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.specific-service-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+
+
+/* ==========================================
+   FORM STYLES
+   ========================================== */
+.business-profile-form {
+  display: grid;
+  gap: 32px;
+}
+
+.form-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.form-section h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-group label.required::after {
+  content: ' *';
+  color: #ef4444;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input.error-field,
+.form-group textarea.error-field {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.field-error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ==========================================
+   BUTTONS AND ACTIONS
+   ========================================== */
+.step-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 2px solid #f1f5f9;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.btn-secondary {
+  background: white;
+  color: #64748b;
+  border: 2px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+}
+
+.btn-sm {
+  padding: 12px 24px;
+  font-size: 14px;
+  min-width: 100px;
+}
+
+/* ==========================================
+   COMPLETION STEP
+   ========================================== */
+.completion-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.completion-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.completion-header h2 {
+  color: #10b981;
+  margin-bottom: 8px;
+}
+
+.completion-subtitle {
+  font-size: 18px;
+  color: #64748b;
+  margin: 0;
+}
+
+.completion-summary {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 2px solid #10b981;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.completion-summary h3 {
+  color: #10b981;
+  margin: 0 0 16px 0;
+  font-size: 20px;
+}
+
+.completion-summary ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.completion-summary li {
+  margin-bottom: 8px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.sample-invoice-preview,
+.ai-assistance-note {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.sample-invoice-preview h3,
+.ai-assistance-note h4 {
+  margin: 0 0 16px 0;
+  color: #1e293b;
+}
+
+.invoice-preview-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.invoice-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.business-info h4,
+.invoice-details h5 {
+  margin: 0 0 8px 0;
+  color: #1e293b;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.terms-acceptance {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.terms-acceptance p {
+  color: #64748b;
+  margin: 0;
+}
+
+.terms-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   ERROR AND SUCCESS MESSAGES
+   ========================================== */
+.error-message,
+.success-message {
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+.success-message {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #059669;
+}
+
+.error-icon,
+.success-icon {
+  font-size: 18px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+  .onboarding-container {
+    padding: 8px;
+  }
+
+  .onboarding-header {
+  margin-bottom: 12px;
+    padding: 12px 16px;
+  }
+
+  .onboarding-header h1 {
+    font-size: 18px;
+  }
+
+  .onboarding-header p {
+    font-size: 12px;
+  }
+
+  .onboarding-progress {
+    margin-bottom: 8px;
+    padding: 6px 8px;
+    gap: 8px;
+  }
+
+  .progress-steps {
+    font-size: 10px !important;
+    gap: 8px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .onboarding-step {
+    padding: 12px 8px;
+    min-height: auto;
+  }
+
+  .onboarding-step h2 {
+  font-size: 18px;
+  }
+
+  .step-number {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .step-description {
+    font-size: 11px;
+  }
+
+  .business-type-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .business-type-card {
+    padding: 10px 6px;
+  }
+
+  .business-type-icon {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .business-type-card h3 {
+    font-size: 13px;
+    margin: 0 0 3px 0;
+  }
+
+  .business-type-card p {
+    font-size: 10px;
+    margin: 0 0 6px 0;
+  }
+
+  .business-type-examples span {
+    padding: 2px 4px;
+    font-size: 8px;
+  }
+
+  .section-container {
+    padding: 24px 20px;
+    margin-bottom: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .step-actions {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 16px 24px;
+  }
+
+
+
+  .specific-services-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .specific-service-card {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  .service-category-container {
+    margin-bottom: 16px;
+  }
+
+  .service-category-header {
+    padding: 16px;
+  }
+
+  .specific-services-list {
+    padding: 16px;
+  }
+
+  .action-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .invoice-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .onboarding-standalone-header {
+    padding: 16px 20px;
+  }
+  
+  .standalone-brand h1 {
+    font-size: 24px;
+  }
+  
+  .standalone-brand p {
+    font-size: 14px;
+  }
+
+  .onboarding-step {
+    padding: 24px 16px;
+  }
+
+  .onboarding-step h2 {
+    font-size: 24px;
+  }
+
+  .business-type-card {
+    padding: 20px 16px;
+  }
+
+  .business-type-icon {
+    font-size: 40px;
+  }
+
+  .business-type-card h3 {
+    font-size: 20px;
+  }
+
+  .section-container {
+    padding: 20px 16px;
+    margin-bottom: 20px;
+  }
+
+  .specific-service-card {
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+
+  .service-category-header {
+    padding: 12px;
+  }
+
+  .specific-services-list {
+    padding: 12px;
+  }
+
+  .service-category-container {
+    margin-bottom: 12px;
+  }
+
+  .specific-services-grid {
+    gap: 8px;
+  }
+
+
+}
+
+/* ==========================================
+   LOADING AND ANIMATIONS
+   ========================================== */
+.onboarding-step.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.service-note {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 1px solid #93c5fd;
+  border-radius: 12px;
+    padding: 20px;
+  margin: 24px 0;
+  color: #1e40af;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.service-note p {
+  margin: 0;
+}
+
+/* Smooth transitions for step changes */
+.onboarding-content {
+  transition: opacity 0.3s ease;
+}
+
+/* Show/Hide animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.onboarding-step {
+  animation: slideInUp 0.5s ease;
+}
+
+/* Hover effects for cards */
+.service-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-category-card.selected {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
+}

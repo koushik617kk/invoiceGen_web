@@ -1,0 +1,207 @@
+/**
+ * Plan Card Styles
+ * Responsive and modern styling for subscription plan cards
+ */
+
+.plan-card {
+  position: relative;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.plan-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.selected {
+  border-color: #3b82f6;
+  background: #f8fafc;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.plan-card.popular {
+  border-color: #10b981;
+  position: relative;
+}
+
+.plan-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.plan-card.disabled:hover {
+  border-color: #e5e7eb;
+  transform: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Badge */
+.plan-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #10b981;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* Header */
+.plan-card__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.plan-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.plan-card__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.plan-card__amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.plan-card__period {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Features */
+.plan-card__features {
+  margin-bottom: 2rem;
+}
+
+.plan-card__feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-card__feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.plan-card__feature-icon {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 16px;
+}
+
+/* Footer */
+.plan-card__footer {
+  text-align: center;
+}
+
+.plan-card__button {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #3b82f6;
+  color: white;
+}
+
+.plan-card__button:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.plan-card__button.selected {
+  background: #10b981;
+}
+
+.plan-card__button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .plan-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .plan-card__title {
+    font-size: 1.25rem;
+  }
+  
+  .plan-card__amount {
+    font-size: 2rem;
+  }
+  
+  .plan-card__feature-item {
+    font-size: 0.875rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .plan-card {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f9fafb;
+  }
+  
+  .plan-card:hover {
+    border-color: #60a5fa;
+  }
+  
+  .plan-card.selected {
+    background: #111827;
+    border-color: #60a5fa;
+  }
+  
+  .plan-card__title {
+    color: #f9fafb;
+  }
+  
+  .plan-card__amount {
+    color: #f9fafb;
+  }
+  
+  .plan-card__period {
+    color: #9ca3af;
+  }
+  
+  .plan-card__feature-item {
+    color: #d1d5db;
+  }
+}

@@ -1,0 +1,393 @@
+/**
+ * Subscription Management Page Styles
+ * Clean and organized subscription management interface
+ */
+
+.subscription-management {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 2rem 1rem;
+}
+
+.subscription-management__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header */
+.subscription-management__header {
+  margin-bottom: 2rem;
+}
+
+.subscription-management__back-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.subscription-management__back-btn:hover {
+  color: #374151;
+}
+
+.subscription-management__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Loading State */
+.subscription-management__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 1rem;
+}
+
+.subscription-management__spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.subscription-management__error {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.subscription-management__error h3 {
+  color: #ef4444;
+  margin: 0 0 1rem 0;
+}
+
+.subscription-management__error p {
+  color: #6b7280;
+  margin: 0 0 1.5rem 0;
+}
+
+.subscription-management__error button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Status Section */
+.subscription-management__status {
+  margin-bottom: 2rem;
+}
+
+/* Details Section */
+.subscription-management__details {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.subscription-management__section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.subscription-management__info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.subscription-management__info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.subscription-management__info-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.subscription-management__info-value {
+  font-size: 0.95rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Actions Section */
+.subscription-management__actions {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.subscription-management__action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.subscription-management__action-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+
+.subscription-management__action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.subscription-management__action-btn--primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.subscription-management__action-btn--primary:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.subscription-management__action-btn--danger {
+  background: #ef4444;
+  color: white;
+}
+
+.subscription-management__action-btn--danger:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.subscription-management__action-btn--secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.subscription-management__action-btn--secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+/* Billing Section */
+.subscription-management__billing {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.subscription-management__placeholder {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+/* Modal */
+.subscription-management__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.subscription-management__modal {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-management__modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+}
+
+.subscription-management__modal-message {
+  color: #6b7280;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+.subscription-management__modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.subscription-management__modal-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.subscription-management__modal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.subscription-management__modal-btn--danger {
+  background: #ef4444;
+  color: white;
+}
+
+.subscription-management__modal-btn--danger:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.subscription-management__modal-btn--secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.subscription-management__modal-btn--secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subscription-management {
+    padding: 1rem;
+  }
+  
+  .subscription-management__title {
+    font-size: 1.75rem;
+  }
+  
+  .subscription-management__info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .subscription-management__action-buttons {
+    flex-direction: column;
+  }
+  
+  .subscription-management__action-btn {
+    min-width: auto;
+  }
+  
+  .subscription-management__modal-actions {
+    flex-direction: column;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .subscription-management {
+    background: #111827;
+  }
+  
+  .subscription-management__title {
+    color: #f9fafb;
+  }
+  
+  .subscription-management__back-btn {
+    color: #9ca3af;
+  }
+  
+  .subscription-management__back-btn:hover {
+    color: #d1d5db;
+  }
+  
+  .subscription-management__details,
+  .subscription-management__actions,
+  .subscription-management__billing {
+    background: #1f2937;
+    border-color: #374151;
+  }
+  
+  .subscription-management__section-title {
+    color: #f9fafb;
+  }
+  
+  .subscription-management__info-label {
+    color: #9ca3af;
+  }
+  
+  .subscription-management__info-value {
+    color: #f9fafb;
+  }
+  
+  .subscription-management__action-btn--secondary {
+    background: #374151;
+    color: #d1d5db;
+    border-color: #4b5563;
+  }
+  
+  .subscription-management__action-btn--secondary:hover:not(:disabled) {
+    background: #4b5563;
+  }
+  
+  .subscription-management__modal {
+    background: #1f2937;
+  }
+  
+  .subscription-management__modal-title {
+    color: #f9fafb;
+  }
+  
+  .subscription-management__modal-message {
+    color: #d1d5db;
+  }
+  
+  .subscription-management__modal-btn--secondary {
+    background: #374151;
+    color: #d1d5db;
+    border-color: #4b5563;
+  }
+  
+  .subscription-management__modal-btn--secondary:hover:not(:disabled) {
+    background: #4b5563;
+  }
+}

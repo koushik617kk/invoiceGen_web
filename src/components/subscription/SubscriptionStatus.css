@@ -1,0 +1,293 @@
+/**
+ * Subscription Status Styles
+ * Clean and informative styling for subscription status display
+ */
+
+.subscription-status {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.subscription-status--compact {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.5rem 0.75rem !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  border-radius: 8px !important;
+  min-width: 120px !important;
+  box-shadow: none !important;
+}
+
+/* Header */
+.subscription-status__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.subscription-status__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.subscription-status__status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: #f3f4f6;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.subscription-status__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Content */
+.subscription-status__content {
+  margin-bottom: 1.5rem;
+}
+
+.subscription-status__plan,
+.subscription-status__trial-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.subscription-status__plan-label,
+.subscription-status__days-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.subscription-status__plan-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.subscription-status__days {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Warnings */
+.subscription-status__warning {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #92400e;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+}
+
+.subscription-status__readonly {
+  background: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+}
+
+/* Actions */
+.subscription-status__actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.subscription-status__upgrade-btn,
+.subscription-status__manage-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.subscription-status__upgrade-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.subscription-status__upgrade-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.subscription-status__upgrade-btn--primary {
+  background: #10b981;
+}
+
+.subscription-status__upgrade-btn--primary:hover {
+  background: #059669;
+}
+
+.subscription-status__manage-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.subscription-status__manage-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Compact Mode - High Specificity */
+.subscription-status-header .subscription-status--compact {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.375rem 0.5rem !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  border-radius: 6px !important;
+  min-width: 80px !important;
+  max-width: 100px !important;
+  box-shadow: none !important;
+}
+
+.subscription-status--compact .subscription-status__info {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.subscription-status--compact .subscription-status__status {
+  font-weight: 600 !important;
+  font-size: 0.65rem !important;
+  color: #1e40af !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+}
+
+.subscription-status--compact .subscription-status__days {
+  font-size: 0.65rem !important;
+  color: #f59e0b !important;
+  font-weight: 600 !important;
+  background: #fef3c7 !important;
+  padding: 0.1rem 0.25rem !important;
+  border-radius: 3px !important;
+}
+
+.subscription-status--compact .subscription-status__upgrade-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  flex: none;
+  background: #3b82f6;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subscription-status {
+    padding: 1rem;
+  }
+  
+  .subscription-status__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .subscription-status__actions {
+    flex-direction: column;
+  }
+  
+  .subscription-status--compact {
+    padding: 0.25rem 0.375rem !important;
+    min-width: 70px !important;
+    max-width: 85px !important;
+    background: rgba(59, 130, 246, 0.1) !important;
+    border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  }
+  
+  .subscription-status--compact .subscription-status__info {
+    gap: 0.2rem !important;
+  }
+  
+  .subscription-status--compact .subscription-status__status {
+    font-size: 0.6rem !important;
+    color: #1e40af !important;
+  }
+  
+  .subscription-status--compact .subscription-status__days {
+    font-size: 0.6rem !important;
+    padding: 0.075rem 0.2rem !important;
+    color: #f59e0b !important;
+    background: #fef3c7 !important;
+  }
+  
+  .subscription-status--compact .subscription-status__upgrade-btn {
+    padding: 0.2rem 0.6rem !important;
+    font-size: 0.7rem !important;
+    background: #3b82f6 !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .subscription-status {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f9fafb;
+  }
+  
+  .subscription-status--compact {
+    background: #111827;
+    border-color: #374151;
+  }
+  
+  .subscription-status__title {
+    color: #f9fafb;
+  }
+  
+  .subscription-status__status-badge {
+    background: #374151;
+    color: #f9fafb;
+  }
+  
+  .subscription-status__plan-label,
+  .subscription-status__days-label {
+    color: #9ca3af;
+  }
+  
+  .subscription-status__plan-name,
+  .subscription-status__days {
+    color: #f9fafb;
+  }
+  
+  .subscription-status__manage-btn {
+    background: #374151;
+    color: #d1d5db;
+    border-color: #4b5563;
+  }
+  
+  .subscription-status__manage-btn:hover {
+    background: #4b5563;
+  }
+}

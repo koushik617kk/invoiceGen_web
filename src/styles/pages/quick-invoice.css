@@ -1,0 +1,784 @@
+/* QuickInvoice CSS - Clean and Modern */
+
+/* ============================================================================
+   QUICK INVOICE - COMPLETE REBUILD FROM SCRATCH
+   Using exact same blue colors as main app: #3b82f6 to #1d4ed8
+   ULTRA COMPACT header + BETTER section design
+   ============================================================================ */
+
+/* ============================================================================
+   MAIN CONTAINER - FULL WIDTH MODERN DESIGN
+   ============================================================================ */
+
+.quick-invoice-container {
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 16px !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* ============================================================================
+   HEADER - ULTRA COMPACT DESIGN (LIKE SCREENSHOT)
+   ============================================================================ */
+
+.quick-invoice-header {
+  background: linear-gradient(135deg, #4f8ff7 0%, #3b79f6 100%) !important;
+  border-radius: 14px !important;
+  padding: 12px 16px !important;
+  margin-bottom: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  min-height: auto !important;
+}
+
+.quick-invoice-header::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.08) 50%, transparent 70%) !important;
+  animation: shimmer 3s infinite !important;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: none !important;
+  color: white !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(5px) !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  flex-shrink: 0 !important;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.back-button svg {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.header-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  flex-grow: 1 !important;
+}
+
+.header-icon {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0 !important;
+  font-size: 20px !important;
+  backdrop-filter: blur(5px) !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.header-text h1 {
+  color: white !important;
+  margin: 0 !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) !important;
+  line-height: 1.2 !important;
+}
+
+.header-text p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 2px 0 0 0 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+}
+
+/* ============================================================================
+   MESSAGES - ERROR AND SUCCESS
+   ============================================================================ */
+
+.error-message {
+  background: #fef2f2 !important;
+  border: 2px solid #fecaca !important;
+  color: #dc2626 !important;
+  padding: 14px 18px !important;
+  border-radius: 10px !important;
+  margin-bottom: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.1) !important;
+}
+
+.error-message svg {
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0 !important;
+}
+
+/* ============================================================================
+   FORM SECTIONS - ENHANCED CARD DESIGN (LIKE SCREENSHOT)
+   ============================================================================ */
+
+.form-section {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.form-section:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  transform: translateY(-2px) !important;
+}
+
+.form-section::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 5px !important;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%) !important;
+}
+
+.section-header {
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  grid-template-rows: auto auto !important;
+  gap: 0 12px !important;
+  align-items: center !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.section-number {
+  grid-row: 1 / 3 !important;
+  grid-column: 1 / 2 !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.25) !important;
+  flex-shrink: 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.section-number::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+  transition: left 0.6s ease !important;
+}
+
+.form-section:hover .section-number::before {
+  left: 100% !important;
+}
+
+.section-title h3 {
+  grid-row: 1 / 2 !important;
+  grid-column: 2 / 3 !important;
+  margin: 0 !important;
+  align-self: end !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  letter-spacing: -0.025em !important;
+}
+
+.section-title p {
+  grid-row: 2 / 3 !important;
+  grid-column: 2 / 3 !important;
+  margin: 2px 0 0 0 !important;
+  align-self: start !important;
+  font-size: 14px !important;
+  color: #64748b !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+}
+
+/* ============================================================================
+   FORM ELEMENTS - ENHANCED AND SPACIOUS
+   ============================================================================ */
+
+.form-group {
+  margin-bottom: 20px !important;
+  width: 100% !important;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1 !important;
+}
+
+.form-group label {
+  display: block !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+  margin-bottom: 10px !important;
+  font-size: 15px !important;
+  letter-spacing: 0.025em !important;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100% !important;
+  padding: 16px 20px !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  font-size: 15px !important;
+  color: #1e293b !important;
+  background: #ffffff !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  box-sizing: border-box !important;
+  font-family: inherit !important;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12) !important;
+  transform: translateY(-1px) !important;
+}
+
+.form-textarea {
+  resize: vertical !important;
+  min-height: 100px !important;
+  line-height: 1.6 !important;
+}
+
+.form-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 20px !important;
+  align-items: end !important;
+  margin-bottom: 0 !important;
+}
+
+/* ============================================================================
+   CUSTOMER SECTION
+   ============================================================================ */
+
+.customer-selection {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+.add-customer-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 16px 24px !important;
+  border-radius: 14px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25) !important;
+  align-self: flex-start !important;
+}
+
+.add-customer-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35) !important;
+}
+
+.add-customer-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* ============================================================================
+   NEW CUSTOMER FORM
+   ============================================================================ */
+
+.new-customer-form {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 18px !important;
+  padding: 28px !important;
+  margin-top: 20px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.form-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 18px !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+.form-header h4 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+
+.close-button {
+  background: #f1f5f9 !important;
+  border: 2px solid #e2e8f0 !important;
+  color: #64748b !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  padding: 10px !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+  width: 42px !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.close-button:hover {
+  background: #e2e8f0 !important;
+  color: #475569 !important;
+  transform: scale(1.05) !important;
+}
+
+.form-actions {
+  display: flex !important;
+  justify-content: flex-end !important;
+  margin-top: 24px !important;
+  padding-top: 20px !important;
+  border-top: 2px solid #f1f5f9 !important;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 16px 28px !important;
+  border-radius: 14px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25) !important;
+}
+
+.save-button:hover:not(:disabled) {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35) !important;
+}
+
+.save-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.save-button svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* ============================================================================
+   INVOICE ITEMS - ENHANCED CARD DESIGN
+   ============================================================================ */
+
+.items-container {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.invoice-item {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.invoice-item:hover {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  transform: translateY(-3px) !important;
+}
+
+.invoice-item::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 5px !important;
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%) !important;
+}
+
+.item-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 24px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 2px solid #f1f5f9 !important;
+}
+
+.item-number {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: white !important;
+  padding: 14px 20px !important;
+  border-radius: 25px !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.25) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.item-number::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+  transition: left 0.6s ease !important;
+}
+
+.invoice-item:hover .item-number::before {
+  left: 100% !important;
+}
+
+.remove-button {
+  background: #fef2f2 !important;
+  border: 2px solid #fecaca !important;
+  color: #dc2626 !important;
+  padding: 14px !important;
+  border-radius: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.remove-button:hover {
+  background: #fee2e2 !important;
+  border-color: #fca5a5 !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2) !important;
+}
+
+.remove-button svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.item-fields {
+  display: grid !important;
+  gap: 24px !important;
+  width: 100% !important;
+}
+
+/* ============================================================================
+   BUTTONS - ADD ITEM
+   ============================================================================ */
+
+.add-item-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 18px 28px !important;
+  border-radius: 18px !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25) !important;
+  width: 100% !important;
+  margin-top: 20px !important;
+}
+
+.add-item-button:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35) !important;
+}
+
+.add-item-button svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+/* ============================================================================
+   INVOICE SUMMARY
+   ============================================================================ */
+
+.invoice-summary {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 18px !important;
+  padding: 28px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.summary-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 14px 0 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+}
+
+.summary-row:last-child {
+  border-bottom: none !important;
+}
+
+.summary-row.total {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  border-top: 2px solid #cbd5e1 !important;
+  padding-top: 18px !important;
+  margin-top: 14px !important;
+}
+
+/* ============================================================================
+   CREATE INVOICE BUTTON
+   ============================================================================ */
+
+.create-invoice-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 20px 36px !important;
+  border-radius: 18px !important;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25) !important;
+  width: 100% !important;
+}
+
+.create-invoice-button:hover:not(:disabled) {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35) !important;
+}
+
+.create-invoice-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.create-invoice-button svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+/* ============================================================================
+   SPINNER
+   ============================================================================ */
+
+.spinner {
+  width: 18px !important;
+  height: 18px !important;
+  border: 2px solid #ffffff !important;
+  border-top: 2px solid transparent !important;
+  border-radius: 50% !important;
+  animation: spin 1s linear infinite !important;
+  display: inline-block !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================================================ */
+
+@media (max-width: 1024px) {
+  .quick-invoice-container {
+    padding: 14px !important;
+  }
+  
+  .form-section {
+    padding: 24px !important;
+  }
+  
+  .invoice-item {
+    padding: 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-invoice-container {
+    padding: 12px !important;
+  }
+  
+  .form-section {
+    padding: 20px !important;
+  }
+  
+  .invoice-item {
+    padding: 20px !important;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  
+  .quick-invoice-header {
+    flex-direction: row !important;
+    gap: 10px !important;
+    text-align: left !important;
+    padding: 6px 10px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
+  }
+  
+  .header-text h1 {
+    font-size: 13px !important;
+  }
+  
+  .header-text p {
+    font-size: 8px !important;
+  }
+  
+  .header-icon {
+    width: 24px !important;
+    height: 24px !important;
+    padding: 5px !important;
+    font-size: 12px !important;
+  }
+  
+  .back-button {
+    padding: 3px 6px !important;
+    font-size: 10px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+  }
+  
+  .back-button svg {
+    width: 8px !important;
+    height: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-invoice-container {
+    padding: 8px !important;
+  }
+  
+  .form-section {
+    padding: 16px !important;
+  }
+  
+  .invoice-item {
+    padding: 16px !important;
+  }
+  
+  .quick-invoice-header {
+    padding: 5px 8px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
+  }
+  
+  .header-text h1 {
+    font-size: 12px !important;
+  }
+  
+  .header-text p {
+    font-size: 7px !important;
+  }
+  
+  .back-button {
+    padding: 2px 5px !important;
+    font-size: 9px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
+  }
+  
+  .back-button svg {
+    width: 7px !important;
+    height: 7px !important;
+  }
+}

@@ -1,0 +1,401 @@
+/* ==========================================
+   AUTH - FINAL ACTIVE STYLES
+   Extracted from cascade analysis
+   Zero visual changes - only active styles
+   ========================================== */
+
+.auth-card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+  padding: 32px 24px;
+}
+
+.auth-form {
+  text-align: left;
+}
+
+/* CONFLICT RESOLVED: .form-title
+   Sources: Auth.css, styles.css
+   Final winning styles below */
+.form-title {
+  color: #1e293b;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+}
+
+/* CONFLICT RESOLVED: .form-group
+   Sources: Auth.css, styles.css
+   Final winning styles below */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow: visible !important;
+}
+
+/* CONFLICT RESOLVED: .form-label
+   Sources: QuickInvoiceStyles.css, Auth.css, styles.css
+   Final winning styles below */
+.form-label {
+  color: #1e293b !important;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+}
+
+/* CONFLICT RESOLVED: .form-input
+   Sources: QuickInvoiceStyles.css, Auth.css, styles.css
+   Final winning styles below */
+.form-input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  backdrop-filter: blur(10px);
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  box-sizing: border-box;
+  color: #1e293b !important;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.auth-brand {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* CONFLICT RESOLVED: .brand-logo
+   Sources: ModernHeader.css, Auth.css, styles.css
+   Final winning styles below */
+.brand-logo {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.8rem;
+  gap: 8px;
+  height: 48px;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 48px;
+}
+
+/* CONFLICT RESOLVED: .form-header
+   Sources: QuickInvoiceStyles.css, Auth.css, styles.css
+   Final winning styles below */
+.form-header {
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+/* CONFLICT RESOLVED: .btn-primary
+   Sources: QuickInvoiceStyles.css, Auth.css, styles.css
+   Final winning styles below */
+.btn-primary {
+  align-items: center;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  color: #ffffff !important;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+  min-width: 120px;
+  padding: 14px 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  will-change: transform, box-shadow;
+}
+
+/* CONFLICT RESOLVED: .error-message
+   Sources: QuickInvoiceStyles.css, Auth.css, styles.css
+   Final winning styles below */
+.error-message {
+  align-items: center;
+  animation: slideInDown 0.3s ease-out;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border: 2px solid #f87171;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(248, 113, 113, 0.2);
+  color: #dc2626;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 12px;
+  margin: 20px 16px;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+}
+
+.auth-container {
+  align-items: center;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.error-message.error-submit {
+  background: #fef2f2;
+  border-color: #f87171;
+  margin-bottom: 32px;
+}
+
+/* CONFLICT RESOLVED: .form-input:focus
+   Sources: QuickInvoiceStyles.css, Auth.css, styles.css
+   Final winning styles below */
+.form-input:focus {
+  -webkit-transform: none !important;
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.form-input:hover {
+  border-color: #d1d5db;
+}
+
+.brand-logo:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+.form-input:disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* CONFLICT RESOLVED: .btn-primary:disabled
+   Sources: Auth.css, styles.css
+   Final winning styles below */
+.btn-primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.error-message::before {
+  content: '⚠️';
+  font-size: 16px;
+}
+
+/* CONFLICT RESOLVED: .form-input::placeholder
+   Sources: QuickInvoiceStyles.css, Auth.css, styles.css
+   Final winning styles below */
+.form-input::placeholder {
+  color: #9ca3af !important;
+  font-weight: 400;
+}
+
+/* CONFLICT RESOLVED: .btn-primary:hover:not(:disabled)
+   Sources: Auth.css, styles.css
+   Final winning styles below */
+.btn-primary:hover:not(:disabled) {
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.form-header h4 {
+  color: #3b82f6;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.btn-primary svg {
+  height: 16px;
+  width: 16px;
+}
+
+.form-group label {
+  color: #374151 !important;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px;
+  color: #1e293b !important;
+  font-size: 1rem;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-group select {
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  color: #1e293b !important;
+}
+
+.error-message svg {
+  flex-shrink: 0;
+  height: 24px;
+  width: 24px;
+}
+
+.form-group textarea {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-height: 80px;
+  padding: 12px 16px;
+  resize: vertical;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-step .form-input {
+  background: white !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+  font-size: 16px !important;
+  padding: 10px 12px !important;
+  transition: all 0.2s ease !important;
+  width: 100% !important;
+}
+
+.terms-footer .btn-primary {
+  margin-bottom: 20px;
+}
+
+.action-buttons .btn-primary {
+  order: -1;
+}
+
+.form-group input.error-field {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+.quick-invoice-form .form-label {
+  color: #374151 !important;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group textarea.error-field {
+  background: #fef2f2;
+  border-color: #dc2626;
+}
+
+.form-group input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.form-group textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.form-step .form-input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+  outline: none !important;
+}
+
+.form-step .form-input:disabled {
+  background: #f8fafc !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed !important;
+}
+
+.form-group label.required::after {
+  color: #dc2626;
+  content: ' *';
+  font-weight: 600;
+}
+
+.form-group input.error-field:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group textarea.error-field:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group input:valid:not(.error-field) {
+  border-color: #22c55e;
+}
+
+.form-group textarea:valid:not(.error-field) {
+  border-color: #22c55e;
+}
+
+.form-group label:has(+ input[required])::after {
+  color: #dc2626;
+  content: ' *';
+  font-weight: 600;
+}
+
+.form-group label:has(+ textarea[required])::after {
+  color: #dc2626;
+  content: ' *';
+  font-weight: 600;
+}
+
