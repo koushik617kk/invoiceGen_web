@@ -195,8 +195,8 @@ export default function App() {
         <div className="main-navigation-row">
           <div className="nav-grid">
             <Link 
-              className={`nav-card ${pathname === '/' ? 'active' : ''}`} 
-              to="/"
+              className={`nav-card ${pathname === '/app' ? 'active' : ''}`} 
+              to="/app"
             >
               <div className="nav-icon">📊</div>
               <div className="nav-content">

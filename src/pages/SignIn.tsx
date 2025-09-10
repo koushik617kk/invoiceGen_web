@@ -29,7 +29,7 @@ export default function SignIn() {
     
     try {
       await signIn({ username: email, password })
-      navigate('/')
+      navigate('/app')
     } catch (e: any) {
       setError(e?.message || 'Sign in failed. Please try again.')
     } finally {

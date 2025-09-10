@@ -424,7 +424,7 @@ export default function QuickInvoice() {
     <div className={styles.quickInvoiceContainer} ref={pageTopRef}>
       {/* Header */}
       <div className={styles.quickInvoiceHeader}>
-        <button className={styles.backButton} onClick={() => navigate('/')}>
+        <button className={styles.backButton} onClick={() => navigate('/app')}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <polyline points="15,18 9,12 15,6"/>
           </svg>

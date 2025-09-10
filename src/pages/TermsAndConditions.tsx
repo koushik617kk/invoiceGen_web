@@ -116,7 +116,7 @@ export default function TermsAndConditions() {
       </div>
 
       <div className="terms-footer">
-        <Link to="/" className="btn-primary">Back to Dashboard</Link>
+        <Link to="/app" className="btn-primary">Back to Dashboard</Link>
         <p className="terms-note">
           By using InvoiceGen, you acknowledge that you have read, understood, and agree to these terms.
         </p>

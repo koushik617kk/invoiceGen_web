@@ -24,7 +24,8 @@ import SubscriptionManagement from './pages/SubscriptionManagement'
 import { SubscriptionProvider } from './contexts/SubscriptionContext'
 
 const router = createBrowserRouter([
-  { path: '/', element: <App />, children: [
+  { path: '/', element: <LandingPage /> },
+  { path: '/app', element: <App />, children: [
       { index: true, element: <Dashboard /> },
       { path: 'business', element: <BusinessProfile /> },
       { path: 'customers', element: <Customers /> },
