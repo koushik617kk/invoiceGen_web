@@ -458,7 +458,7 @@ export default function Invoices() {
                   
                   {/* Invoice Actions */}
                   <div className="invoice-card-actions">
-                        <Link className="action-btn view-btn" to={`/invoice/${inv.id}`}>
+                        <Link className="action-btn view-btn" to={`/app/invoice/${inv.id}`}>
                       <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                         <circle cx="12" cy="12" r="3"/>
@@ -519,7 +519,7 @@ export default function Invoices() {
             <div className="empty-icon">📄</div>
             <h3 className="empty-title">No invoices found</h3>
             <p className="empty-subtitle">Try adjusting your filters or create your first invoice</p>
-            <Link to="/create-invoice" className="create-invoice-btn">
+            <Link to="/app/create-invoice" className="create-invoice-btn">
               <span className="btn-icon">➕</span>
               Create Invoice
             </Link>

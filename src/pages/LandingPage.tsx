@@ -1,8 +1,75 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { fetchAuthSession } from 'aws-amplify/auth';
 
 const LandingPage: React.FC = () => {
   const [showSignIn, setShowSignIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    checkAuthAndRedirect();
+  }, []);
+
+  const checkAuthAndRedirect = async () => {
+    try {
+      const session = await fetchAuthSession();
+      const hasToken = Boolean(session.tokens?.idToken || session.tokens?.accessToken);
+      
+      if (hasToken) {
+        // User is logged in, redirect to app
+        navigate('/app', { replace: true });
+        return;
+      }
+    } catch (error) {
+      console.log('Auth check failed:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Show loading while checking authentication
+  if (isLoading) {
+    return (
+      <div className="loading-container" style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)',
+        zIndex: 9999
+      }}>
+        <div style={{
+          background: 'white',
+          borderRadius: '20px',
+          padding: '32px',
+          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+          textAlign: 'center',
+          maxWidth: '400px',
+          width: '90%',
+          margin: '0 auto'
+        }}>
+          <div style={{
+            width: '48px',
+            height: '48px',
+            border: '4px solid #e2e8f0',
+            borderTop: '4px solid #3b82f6',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite',
+            margin: '0 auto 16px',
+            display: 'block'
+          }}></div>
+          <h3 style={{ color: '#1f2937', margin: '0 0 8px 0', fontSize: '1.5rem', fontWeight: '600' }}>📄 InvoiceGen</h3>
+          <p style={{ color: '#6b7280', margin: 0, fontSize: '1rem' }}>Checking authentication...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="landing-page">

@@ -358,7 +358,7 @@ export default function CreateInvoice() {
       
       showToast(`Invoice #${inv.invoice_number} created`, 'success')
       setSuccessToast({ visible: true, message: `Invoice #${inv.invoice_number} created successfully!` })
-      navigate(`/invoice/${inv.id}`)
+      navigate(`/app/invoice/${inv.id}`)
     } finally {
       setCreating(false)
     }
@@ -554,7 +554,7 @@ export default function CreateInvoice() {
       </select>
         <button 
                 className="secondary-btn" 
-          onClick={() => navigate('/customers')}
+          onClick={() => navigate('/app/customers')}
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <line x1="12" y1="5" x2="12" y2="19"/>

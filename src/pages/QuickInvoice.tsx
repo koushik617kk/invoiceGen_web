@@ -246,7 +246,7 @@ export default function QuickInvoice() {
         }
       });
 
-      navigate(`/invoice/${response.id}?quickInvoice=true`);
+      navigate(`/app/invoice/${response.id}?quickInvoice=true`);
       
     } catch (error: any) {
       console.error('Error creating quick invoice:', error);

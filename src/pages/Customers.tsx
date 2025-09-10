@@ -200,7 +200,7 @@ export default function Customers() {
                 <div className="customer-info">
                   <div 
                     className="customer-name"
-                    onClick={() => navigate(`/customer/${c.id}`)}
+                    onClick={() => navigate(`/app/customer/${c.id}`)}
                   >
                     {c.name}
                   </div>
@@ -221,7 +221,7 @@ export default function Customers() {
                 </div>
                 <button 
                   className="view-details-btn" 
-                  onClick={() => navigate(`/customer/${c.id}`)}
+                  onClick={() => navigate(`/app/customer/${c.id}`)}
                 >
                   <svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>

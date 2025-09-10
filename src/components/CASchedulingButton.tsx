@@ -33,7 +33,13 @@ const CASchedulingButton: React.FC<CASchedulingButtonProps> = ({
     try {
       setIsLoading(true)
       const response: FirstInvoiceCheck = await checkFirstInvoice()
-      setShowButton(response.is_first_invoice)
+      console.log('CA Scheduling Check Response:', response)
+      
+      // Show button if it's the first invoice OR if user hasn't booked a CA consultation yet
+      const shouldShow = response.is_first_invoice || !response.has_ca_booking
+      console.log('Should show CA button:', shouldShow, '(is_first_invoice:', response.is_first_invoice, ', has_ca_booking:', response.has_ca_booking, ')')
+      
+      setShowButton(shouldShow)
       setButtonInfo({
         total_invoices: response.total_invoices,
         has_ca_booking: response.has_ca_booking

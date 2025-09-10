@@ -80,7 +80,7 @@ export default function Dashboard() {
           </div>
           <button 
             className="quick-invoice-btn"
-            onClick={() => navigate('/quick-invoice')}
+            onClick={() => navigate('/app/quick-invoice')}
           >
             <span className="btn-icon">✨</span>
             <span className="btn-text">Quick Invoice</span>
@@ -159,7 +159,7 @@ export default function Dashboard() {
       <div className="recent-invoices-section">
         <div className="section-header">
           <h2 className="section-title">Recent Invoices</h2>
-          <Link to="/invoices" className="view-all-btn">View All Invoices</Link>
+          <Link to="/app/invoices" className="view-all-btn">View All Invoices</Link>
         </div>
         
         <div className="invoices-list">

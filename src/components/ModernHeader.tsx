@@ -60,7 +60,7 @@ export default function ModernHeader() {
         <div className="header-container">
           {/* Brand Section */}
           <div className="brand-section">
-            <Link to="/dashboard" className="brand-logo">
+            <Link to="/app" className="brand-logo">
               <div className="logo-icon">📄</div>
               <span className="brand-name">InvoiceGen</span>
             </Link>

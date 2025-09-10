@@ -1114,13 +1114,13 @@ const Onboarding: React.FC = () => {
       </div>
 
       <div className="action-buttons">
-        <Link to="/business" className="btn-primary">Complete Business Profile</Link>
-        <Link to="/quick-invoice" className="btn-secondary">⚡ Create Quick Invoice (30 seconds)</Link>
-        <Link to="/service-templates" className="btn-secondary">➕ Add Missing Services (AI Assisted)</Link>
+        <Link to="/app/business" className="btn-primary">Complete Business Profile</Link>
+        <Link to="/app/quick-invoice" className="btn-secondary">⚡ Create Quick Invoice (30 seconds)</Link>
+        <Link to="/app/service-templates" className="btn-secondary">➕ Add Missing Services (AI Assisted)</Link>
       </div>
 
       <div className="terms-acceptance">
-        <p>By continuing, you agree to our <Link to="/terms" className="terms-link">Terms of Service</Link></p>
+        <p>By continuing, you agree to our <Link to="/app/terms" className="terms-link">Terms of Service</Link></p>
       </div>
     </div>
   );

@@ -95,7 +95,7 @@ const SubscriptionManagement: React.FC = () => {
   };
 
   const handleBackToDashboard = () => {
-    navigate('/dashboard');
+    navigate('/app');
   };
 
   if (isLoading) {

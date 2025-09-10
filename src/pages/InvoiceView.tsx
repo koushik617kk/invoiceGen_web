@@ -303,7 +303,7 @@ export default function InvoiceView() {
         <div className="invoice-header-section">
           <div className="header-content">
             <div className="header-left">
-              <button className="back-btn" onClick={() => navigate('/invoices')}>
+              <button className="back-btn" onClick={() => navigate('/app/invoices')}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="15,18 9,12 15,6"/>
                 </svg>
@@ -826,7 +826,7 @@ export default function InvoiceView() {
       <div className="invoice-header-section">
         <div className="header-content">
           <div className="header-left">
-            <button className="back-btn" onClick={() => navigate('/invoices')}>
+            <button className="back-btn" onClick={() => navigate('/app/invoices')}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="15,18 9,12 15,6"/>
               </svg>

@@ -164,8 +164,8 @@ export default function App() {
               <div className="subscription-status-header">
                 <SubscriptionStatus
                   subscription={subscription}
-                  onUpgrade={() => navigate('/subscription')}
-                  onManage={() => navigate('/subscription')}
+                  onUpgrade={() => navigate('/app/subscription')}
+                  onManage={() => navigate('/app/subscription')}
                   compact={true}
                 />
               </div>
@@ -206,8 +206,8 @@ export default function App() {
             </Link>
             
             <Link 
-              className={`nav-card ${pathname.startsWith('/invoices') ? 'active' : ''}`} 
-              to="/invoices"
+              className={`nav-card ${pathname.startsWith('/app/invoices') ? 'active' : ''}`} 
+              to="/app/invoices"
             >
               <div className="nav-icon">📋</div>
               <div className="nav-content">
@@ -217,8 +217,8 @@ export default function App() {
             </Link>
             
             <Link 
-              className={`nav-card ${pathname.startsWith('/customers') ? 'active' : ''}`} 
-              to="/customers"
+              className={`nav-card ${pathname.startsWith('/app/customers') ? 'active' : ''}`} 
+              to="/app/customers"
             >
               <div className="nav-icon">👥</div>
               <div className="nav-content">
@@ -228,8 +228,8 @@ export default function App() {
             </Link>
             
             <Link 
-              className={`nav-card ${pathname.startsWith('/create-invoice') ? 'active' : ''}`} 
-              to="/create-invoice"
+              className={`nav-card ${pathname.startsWith('/app/create-invoice') ? 'active' : ''}`} 
+              to="/app/create-invoice"
             >
               <div className="nav-icon">✨</div>
               <div className="nav-content">
@@ -244,8 +244,8 @@ export default function App() {
         <div className={`secondary-menu ${menuOpen ? 'open' : ''}`}>
           <div className="menu-items">
             <Link 
-              className={`menu-item ${pathname.startsWith('/item-library') ? 'active' : ''}`} 
-              to="/item-library"
+              className={`menu-item ${pathname.startsWith('/app/item-library') ? 'active' : ''}`} 
+              to="/app/item-library"
               onClick={() => setMenuOpen(false)}
             >
               <span className="menu-icon">📚</span>
@@ -253,8 +253,8 @@ export default function App() {
             </Link>
             
             <Link 
-              className={`menu-item ${pathname.startsWith('/service-templates') ? 'active' : ''}`} 
-              to="/service-templates"
+              className={`menu-item ${pathname.startsWith('/app/service-templates') ? 'active' : ''}`} 
+              to="/app/service-templates"
               onClick={() => setMenuOpen(false)}
             >
               <span className="menu-icon">📋</span>
@@ -262,8 +262,8 @@ export default function App() {
             </Link>
             
             <Link 
-              className={`menu-item ${pathname.startsWith('/business') ? 'active' : ''}`} 
-              to="/business"
+              className={`menu-item ${pathname.startsWith('/app/business') ? 'active' : ''}`} 
+              to="/app/business"
               onClick={() => setMenuOpen(false)}
             >
               <span className="menu-icon">🏢</span>
@@ -271,8 +271,8 @@ export default function App() {
             </Link>
             
             <Link 
-              className={`menu-item ${pathname.startsWith('/subscription') ? 'active' : ''}`} 
-              to="/subscription"
+              className={`menu-item ${pathname.startsWith('/app/subscription') ? 'active' : ''}`} 
+              to="/app/subscription"
               onClick={() => setMenuOpen(false)}
             >
               <span className="menu-icon">💳</span>
@@ -281,7 +281,7 @@ export default function App() {
             
             <Link 
               className="menu-item" 
-              to="/terms"
+              to="/app/terms"
               onClick={() => setMenuOpen(false)}
             >
               <span className="menu-icon">📄</span>
@@ -297,7 +297,7 @@ export default function App() {
         {subscription && (subscription.is_expiring_soon || subscription.status === 'expired') && (
           <SubscriptionPrompt
             subscription={subscription}
-            onUpgrade={() => navigate('/subscription')}
+            onUpgrade={() => navigate('/app/subscription')}
             variant="banner"
           />
         )}
